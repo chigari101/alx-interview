@@ -8,8 +8,10 @@
     of operations needed to result in exactly n H characters in the file.
 """
 
-
 def minOperations(n):
+    if not isinstance(n, int):
+        return 0
+
     nope = 0
     minope = 2
     while n > 1:
