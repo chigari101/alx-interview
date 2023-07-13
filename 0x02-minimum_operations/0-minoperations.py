@@ -9,14 +9,17 @@
 """
 
 def minOperations(n):
-    if not isinstance(n, int):
+    if not isinstance(n, int) or n < 1:
         return 0
 
-    nope = 0
-    minope = 2
+    ops_count = 0
+    divisor = 2
+
     while n > 1:
-        while n % minope == 0:
-            nope += minope
-            n //= minope
-        minope += 1
-    return nope
+        if n % divisor == 0:
+            ops_count += divisor
+            n //= divisor
+        else:
+            divisor += 1
+
+    return ops_count
