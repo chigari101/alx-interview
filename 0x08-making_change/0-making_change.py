@@ -16,3 +16,6 @@ def makeChange(coins, total):
 
     # Return the result for the total amount
     return min_coins[total] if min_coins[total] != float('inf') else -1
+
+print(makeChange([1, 2, 25], 37))  # Output: 7
+print(makeChange([1256, 54, 48, 16, 102], 1453))  # Output: -1
